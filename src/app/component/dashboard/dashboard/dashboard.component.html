@@ -1,0 +1,17 @@
+
+
+  <div class="flex-container">
+    <h1>Top 5 Products</h1>
+    <mat-grid-list cols="3" rowHeight="3:3">
+        <mat-grid-tile *ngFor="let product of topProducts">
+            <mat-card class="example-card">
+                <img mat-card-image [src]="product.imageUrl" alt="{{product.productname}}" />
+                <h3>{{product.productname}}</h3>
+                <p class="orderCount">Order Count: {{product.orderCount}}</p>
+                <mat-card-content>
+                    <p>{{product.description}}</p>
+                </mat-card-content>
+              </mat-card>
+        </mat-grid-tile>
+      </mat-grid-list>
+  </div>

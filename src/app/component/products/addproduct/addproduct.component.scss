@@ -1,0 +1,64 @@
+mat-card{
+    margin: 2%;
+    text-align: left;
+}
+
+.mat-mdc-form-field {
+    width: 98%;
+    margin: 1%;
+}
+.mat-50{
+    width: 48%;
+    margin: 1%;
+}
+
+.mat-100{
+    width: 98%;
+    margin: 1%;
+}
+.mat-33{
+    width: 31.25%;
+}
+
+.mat-20{
+    width: 15%;
+}
+
+
+.btn{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    
+    button{
+        width: 35px;
+        height: 25px;
+    }
+}
+  
+
+
+
+
+.price-spinner::-webkit-inner-spin-button,
+.price-spinner::-webkit-outer-spin-button{
+    display: none;
+  }
+
+.stock-spinner::-webkit-inner-spin-button,
+.stock-spinner::-webkit-outer-spin-button{
+    display: none;
+  }
+
+
+
+button{
+    margin: 2px;
+}
+
+.example-button-container {
+    width: 120px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }

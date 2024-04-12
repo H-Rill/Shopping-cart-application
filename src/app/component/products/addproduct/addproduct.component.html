@@ -1,0 +1,67 @@
+<form [formGroup]="productform" (ngSubmit)="SaveProducts()" >
+    <mat-card>
+        <mat-card-header>
+            <h1>{{title}}</h1>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-form-field  class="mat-50">
+                <mat-label>Product Name</mat-label>
+                <input formControlName="productname" matInput>
+                <mat-error>{{getproductNameErrorMessage()}}</mat-error>
+            </mat-form-field>
+            <mat-form-field class="mat-50">
+                <mat-label>Brand</mat-label>
+                <input formControlName="brand" matInput >
+                <mat-error>{{getBrandErrorMessage()}}</mat-error>
+            </mat-form-field>
+            <mat-form-field class="mat-50 ">
+                <mat-label>Category</mat-label>
+                <mat-select formControlName="category" matInput placeholder="Select Role">
+                    <mat-option *ngFor="let option of categoryOptions" [value]="option.value">{{ option.viewValue }}</mat-option>
+                </mat-select>
+                <mat-error>{{getCategoryErrorMessage()}}</mat-error>
+            </mat-form-field>
+            <mat-form-field  class="mat-50">
+                <mat-label>Product Image Url</mat-label>
+                <input formControlName="imageUrl" matInput>
+                <!-- <mat-error>{{getproductNameErrorMessage()}}</mat-error> -->
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Description</mat-label>
+                <textarea formControlName="description" matInput></textarea>
+              </mat-form-field>
+            <mat-card-actions >
+                <mat-form-field floatLabel="always" class="mat-50">
+                    <mat-label>Price</mat-label>
+                    <input matInput type="number" class="price-spinner" formControlName="price" placeholder="0">
+                    <span matTextPrefix>₱&nbsp;</span>
+                    <mat-error *ngIf="productform.get('price')?.hasError('zeroPrice')">Price cannot be zero</mat-error>
+                </mat-form-field>
+                <mat-form-field class="mat-50">
+                    <mat-label>Stock</mat-label>
+                    <input matInput type="number" class="stock-spinner"  formControlName="stockCount">
+                    <mat-error *ngIf="productform.get('stockCount')?.hasError('zeroStock')">Stock cannot be zero</mat-error>
+                </mat-form-field>
+                <div class="btn">
+                    <button mat-raised-button color="primary" type="button" (click)="decrementStock()" ><strong>-</strong></button>
+            <button mat-raised-button color="primary" type="button" (click)="incrementStock()"><strong>+</strong></button>
+                </div>
+            </mat-card-actions>
+            <div class="btn"></div>
+            
+            <div class="example-button-container">
+                
+           
+            </div>
+           
+  
+          
+              
+            <mat-card-actions>
+           
+                <button mat-raised-button color="primary" type="Submit">Save</button>
+                <button  mat-raised-button color="warn" type="button" (click)="ClosePopup()">Close</button>
+            </mat-card-actions>
+        </mat-card-content>
+    </mat-card>
+</form>

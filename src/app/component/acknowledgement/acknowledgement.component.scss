@@ -1,0 +1,19 @@
+$title-color: #FD5D5D;
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+h2{
+    color: $title-color;
+}
+
+.password{
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 50px;
+}

@@ -1,0 +1,19 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+.side-bar{
+    text-align: center;
+    min-height: 600px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.profile-button {
+  display: flex;
+  align-items: center;
+}
+.profile-name {
+  margin-right: 5px; 
+}

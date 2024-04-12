@@ -1,0 +1,23 @@
+.flex-container{
+    margin: 2%;
+}
+
+img{
+    height: 200px;
+    width: auto;
+}
+
+.example-card{
+    width: 400px;
+    height: 500px;
+    top: 100px;
+}
+
+mat-card-content{
+    word-wrap: break-word;
+}
+
+.orderCount{
+    font-size: 16px;
+    font-weight: 500;
+}

@@ -1,0 +1,502 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "user1",
+      "firstName": "John",
+      "middleName": "E",
+      "lastName": "Doe",
+      "password": "password1",
+      "email": "john.doe@example.com",
+      "birthdate": "1990-01-01",
+      "interests": [
+        "Reading",
+        "Music",
+        "Travel"
+      ],
+      "mobilenumber": "1234567890",
+      "role": "admin",
+      "isActive": true
+    },
+    {
+      "id": "2",
+      "username": "user2",
+      "firstName": "Jane",
+      "middleName": "B",
+      "lastName": "Smith",
+      "password": "password2",
+      "email": "jane.smith@example.com",
+      "birthdate": "1995-05-15",
+      "interests": [
+        "Sports",
+        "Cooking",
+        "Movies"
+      ],
+      "mobilenumber": "2345678901",
+      "role": "user",
+      "isActive": true
+    },
+    {
+      "id": "3",
+      "username": "user3",
+      "firstName": "Alice",
+      "middleName": "S",
+      "lastName": "Johnson",
+      "password": "password3",
+      "email": "alice.johnson@example.com",
+      "birthdate": "1988-11-20",
+      "interests": [
+        "Painting",
+        "Photography",
+        "Hiking"
+      ],
+      "mobilenumber": "3456789012",
+      "role": "user",
+      "isActive": true
+    },
+    {
+      "id": "4",
+      "username": "user4",
+      "firstName": "Bob",
+      "middleName": "R",
+      "lastName": "Brown",
+      "password": "password4",
+      "email": "bob.brown@example.com",
+      "birthdate": "1980-07-10",
+      "interests": [
+        "Gardening",
+        "Technology",
+        "Gaming"
+      ],
+      "mobilenumber": "4567890123",
+      "role": "user",
+      "isActive": true
+    },
+    {
+      "id": "5",
+      "firstName": "Eve",
+      "middleName": "A",
+      "lastName": "Taylor",
+      "password": "password5Aasd",
+      "username": "user5",
+      "email": "eve.taylor@example.com",
+      "birthdate": "1992-03-25T00:00:00.000Z",
+      "mobilenumber": "9872613132",
+      "role": "admin",
+      "isActive": false
+    },
+    {
+      "id": "6",
+      "firstName": "asda",
+      "middleName": "asd",
+      "lastName": "asd",
+      "password": "asd123ASD",
+      "username": "asdasd",
+      "email": "asdf@gmail.com",
+      "birthdate": "2024-04-01T15:05:11.914Z",
+      "mobilenumber": "98765123",
+      "role": "admin",
+      "isActive": true
+    },
+    {
+      "id": "7",
+      "firstName": "asd",
+      "middleName": "asd",
+      "lastName": "asd",
+      "password": "asd123AS",
+      "username": "asdasd",
+      "email": "hmacalatan@77global.biz",
+      "birthdate": "2024-04-01T16:24:42.986Z",
+      "mobilenumber": "9123123321",
+      "role": "admin",
+      "isActive": true
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "productname": "Dell XPS 13",
+      "description": "13-inch laptop with stunning InfinityEdge display",
+      "price": 80000,
+      "category": "laptop",
+      "brand": "Dell",
+      "image": "oh hello",
+      "orderCount": 100,
+      "stockCount": 201,
+      "imageUrl": ""
+    },
+    {
+      "id": "2",
+      "productname": "Samsung Galaxy S22 Ultra",
+      "description": "Flagship smartphone with advanced camera features",
+      "price": 70000,
+      "category": "phone",
+      "brand": "Samsung",
+      "orderCount": 29,
+      "stockCount": 200,
+      "imageUrl": ""
+    },
+    {
+      "id": "3",
+      "productname": "PlayStation 5",
+      "description": "Next-gen gaming console for immersive gaming experiences. Next-gen gaming console for immersive gaming experiences . Next-gen gaming console for immersive gaming experiences ",
+      "price": 35000,
+      "category": "gaming devices",
+      "brand": "Sony",
+      "orderCount": 80,
+      "stockCount": 190,
+      "imageUrl": ""
+    },
+    {
+      "id": "4",
+      "productname": "Nintendo Switch",
+      "description": "Hybrid gaming console for gaming on-the-go",
+      "price": 20000,
+      "category": "gaming devices",
+      "brand": "Nintendo",
+      "orderCount": 12,
+      "stockCount": 100,
+      "imageUrl": ""
+    },
+    {
+      "id": "5",
+      "productname": "FIFA 22",
+      "description": "Popular soccer simulation game",
+      "price": 2500,
+      "category": "games",
+      "brand": "EA Sports",
+      "orderCount": 90,
+      "stockCount": 201,
+      "imageUrl": ""
+    },
+    {
+      "id": "6",
+      "productname": "Logitech G Pro X Superlight",
+      "description": "Ultra-lightweight wireless gaming mouse",
+      "price": 6000,
+      "category": "gadget accessories",
+      "brand": "Logitech",
+      "orderCount": 20,
+      "stockCount": 390,
+      "imageUrl": ""
+    },
+    {
+      "id": "7",
+      "productname": "Apple MacBook Pro 14",
+      "description": "Powerful laptop for professionals and creatives",
+      "price": 100000,
+      "category": "laptop",
+      "brand": "Apple",
+      "orderCount": 100,
+      "stockCount": 500,
+      "imageUrl": ""
+    },
+    {
+      "id": "8",
+      "productname": "iPhone 13 Pro Max",
+      "description": "Premium iPhone with Pro camera system",
+      "price": 90000,
+      "category": "phone",
+      "brand": "Apple",
+      "orderCount": 300,
+      "stockCount": 1000,
+      "imageUrl": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQAlAMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAAAgMBBQYEB//EAEUQAAIBAwEDBgkGDAcAAAAAAAABAgMEEQUSITEGIkFRYbETFSM0cnN0stEHUlRxk9IUFiUyMzWRlKGiweE2QkRTVYGC/8QAGQEBAAMBAQAAAAAAAAAAAAAAAAEEBQMC/8QAIREBAQABAwUBAQEAAAAAAAAAAAERAgQxAxIyM1EhFBP/2gAMAwEAAhEDEQA/APqgAKK0AAAACQABAAAAAAAAAAAAAAAAAAAAAABkwV3UpQtK84vEo05NfXgkrX1dUnUrSp2dODgpOKqTy9pp4eIriu3cS8NqOFnwK+u3l98+efKBqt9pHI+L0upOhKtcQt6lam+dTpKD4NcMtJZ+JynyY65qlDlbb2ML+vd2dzCfh6dSbnGOINqXHc08b+nh0l+dPRPzCl369X7l9u8NqOfzqP7vL74jcXsm0q1tlcU7eX3yi81mx0tw/Db3T6DqrmK7uY0s9qzx4/3M1Z+Xtpp52pODfzlstruPc6Wi2zteb1NcmcvR4S+/3rX93l98yq19Hft2s+zwco/x2n3Ek9wPf8/T+Of+3U+rbO6VztwlB061PG3Tbzx4NPpT6/r6j0Gto/renjHOt6me3EoY72bMz+tomjXiL3R1XVozWAAcXUAAAAAAAAAAApvvMrj1Uu5lxTfeZXHqpdzJnKLw5C9p6dLk9Vnq9SjTtIzl4SdbGzjm7mnx343Y48N5peRn4qTr13ydr29S4jHMoKk6c8LpxJZazjhu4buB5flE028vuTFClaQlUdO5jXdKL31FstYXW9+Uux9hyfIjTr78Zra+/AqtnRtoT23Vi4ObcHHCT48cvqWew1bnLPk/Hh5at1eVOpVNTdRyn5u5blsYShjPQuDx0pn0X5MZ3ceTlhRu9vZhVnKip5yqb2tnj0cWuxo1vLPVZ6dUs3R0j8O8NOTlzW1FrHBJPEnnj2dJ2GlUnGpHZXNTcn+zpfS+09aeUar+N+pGclCZNSOjkUH+WKHs1X3qZtTS01OWuWbjLEY0KrmvnLMP64NyZm69jQ23gAArO4AAAAAAAAAAB5dXqqhpN7Wa2vB29SWOvEWeo1/KH/D+qex1fcZM5Rq4ainFSt4wmlKEoJOMllPcYpWdtTyoUKcc8cRJ0v0VP0UTybUZVRVtQT/RR/YXQUYLEUkuwhkbRKFyZLaKFIypgSozfj6ySe50ayf8jN6aC0qJa7axaTcqFVJ9W+BvzM3XsaG28AAFZ3AAAAAAAAAAAKL9KVjcppNOlPKfTuZeU33mVx6qXcyZzEXhztF+Qp+gu4ntFNF+Rp+gu4lk2mU9NvSncVNiGF0tvoPVVspU7Z5dNSjzpTy8tdXYeWwrqjWe08KSxnqPdXuaE6M4ynFrHBPeQNZtGVIqyZySL9Pgp63byzvhb1Wu3fBf1OiOe0p51mn7NU96mdCZu69i/tvBgAFZ3AAAAAAAAAAAKb7zK49VLuZcU33mVx6qXcyZzEXhy9F+Rp+iu4lkpovyNP0V3E8mzGUnkZIZGSRPJnJVtGdoD26R+uYezVPepnRnNaM861D2ap71M6Uzd17F/b+DAAKzuAAAAAAAAAAAU33mVx6qXcy4pvvMrj1Uu5kzlF4cfRfkaforuJ5KqL8jT9FdxLJsxmYTyMkMjJKMJ5GSGRkgw2GhvOtR9lqe9TOnOW0DfrcfZanv0zqTN3PsXtv4MAAru4AAAAAAAAAABTe+Z3HqpdzLjE4RqQlCXCSaf1MmXFK4Wk/JU9/+VdxLJGdKpaVHa3PNqw5qzu210SXWn/Yzh9TNeWWMyzFZyMmMPqYw+pk5Qzkzkjh9TMSeysy5q63uGUtlyef5bTz/AKWpu/8AVM6k53kvazlWqX04tU9jwdJtfn5aba7Nyx17/wDvojN3Fl6n4vdCY0AAODqAAAAAAAAAAAAAI1aVOtHZrU4VI/NnFSX8TzeK9O/4+0+wj8D1g9d1RiPJ4r076BafYx+A8V6d9AtPsY/A9YHdfp2z48nivTvoFp9jH4E6en2NOanTsraMlwcaMU+49AHdfp2wABCQAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/2Q=="
+    },
+    {
+      "id": "9",
+      "productname": "Razer BlackShark V2 Pro",
+      "description": "Wireless gaming headset with THX spatial audio",
+      "price": 12000,
+      "category": "gadget accessories",
+      "brand": "Razer",
+      "orderCount": 90,
+      "stockCount": 1000,
+      "imageUrl": ""
+    },
+    {
+      "id": "10",
+      "productname": "Acer Predator Helios 300",
+      "description": "High-performance gaming laptop with NVIDIA GeForce RTX 30 series GPU",
+      "price": 70000,
+      "category": "laptop",
+      "brand": "Acer",
+      "orderCount": 320,
+      "stockCount": 1000,
+      "imageUrl": "https://i.pcmag.com/imagery/reviews/03n7pcJTflJrZcaCk6zj1cu-1.fit_scale.size_760x427.v1623700260.jpg"
+    },
+    {
+      "id": "11",
+      "productname": "OnePlus 10 Pro",
+      "description": "Flagship smartphone with OxygenOS",
+      "price": 65000,
+      "category": "phone",
+      "brand": "OnePlus",
+      "orderCount": 50,
+      "stockCount": 1000,
+      "imageUrl": ""
+    },
+    {
+      "id": "12",
+      "productname": "Xbox Series X",
+      "description": "Next-gen gaming console with 4K gaming capabilities",
+      "price": 30000,
+      "category": "gaming devices",
+      "brand": "Microsoft",
+      "orderCount": 300,
+      "stockCount": 1000,
+      "imageUrl": "data:image/jpeg;base64,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"
+    },
+    {
+      "id": "13",
+      "productname": "The Legend of Zelda: Breath of the Wild",
+      "description": "Open-world adventure game for Nintendo Switch",
+      "price": 3000,
+      "category": "games",
+      "brand": "Nintendo",
+      "orderCount": 20,
+      "stockCount": 1000,
+      "imageUrl": ""
+    },
+    {
+      "id": "14",
+      "productname": "Anker PowerCore 26800 Portable Charger",
+      "description": "High-capacity power bank for charging gadgets on-the-go",
+      "price": 3000,
+      "category": "gadget accessories",
+      "brand": "Anker",
+      "orderCount": 20,
+      "stockCount": 1000,
+      "imageUrl": ""
+    },
+    {
+      "id": "15",
+      "productname": "Asus ROG Phone 5",
+      "description": "Gaming smartphone with Snapdragon 888 processor",
+      "price": 55000,
+      "category": "phone",
+      "brand": "Asus",
+      "orderCount": 128,
+      "stockCount": 600,
+      "imageUrl": ""
+    },
+    {
+      "id": "16",
+      "productname": "Lenovo Legion 5",
+      "description": "Gaming laptop with AMD Ryzen processor",
+      "price": 60000,
+      "category": "laptop",
+      "brand": "Lenovo",
+      "orderCount": 300,
+      "stockCount": 1000,
+      "imageUrl": "data:image/jpeg;base64,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"
+    },
+    {
+      "id": "17",
+      "productname": "Logitech G Pro X Keyboard",
+      "description": "Mechanical gaming keyboard with customizable switches",
+      "price": 8000,
+      "category": "gadget accessories",
+      "brand": "Logitech",
+      "orderCount": 200,
+      "stockCount": 1000,
+      "imageUrl": ""
+    },
+    {
+      "id": "18",
+      "productname": "SteelSeries Arctis 7",
+      "description": "Wireless gaming headset with DTS Headphone:X v2.0",
+      "price": 10000,
+      "category": "gadget accessories",
+      "brand": "SteelSeries",
+      "orderCount": 280,
+      "stockCount": 1000,
+      "imageUrl": ""
+    },
+    {
+      "id": "19",
+      "productname": "Samsung Odyssey G7",
+      "description": "Curved gaming monitor with QLED technology",
+      "price": 40000,
+      "category": "gaming devices",
+      "brand": "Samsung",
+      "orderCount": 886,
+      "stockCount": 991,
+      "imageUrl": "data:image/jpeg;base64,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"
+    },
+    {
+      "id": "20",
+      "productname": "Cyberpunk 2077",
+      "description": "Action role-playing game set in a futuristic open world",
+      "price": 2500,
+      "category": "games",
+      "brand": "CD Projekt",
+      "orderCount": 30,
+      "stockCount": 100,
+      "imageUrl": ""
+    },
+    {
+      "id": "21",
+      "productname": "asdf",
+      "description": "asdf",
+      "price": 12,
+      "category": "electronics",
+      "brand": "asdf",
+      "stockCount": 12,
+      "imageUrl": ""
+    },
+    {
+      "id": "22",
+      "productname": "asdf",
+      "description": "sdfg",
+      "price": 23,
+      "category": "electronics",
+      "brand": "asdf",
+      "stockCount": 23,
+      "imageUrl": ""
+    },
+    {
+      "id": "23",
+      "productname": "asdasd",
+      "description": "asdfa",
+      "price": 23,
+      "category": "electronics",
+      "brand": "asda",
+      "stockCount": 23,
+      "imageUrl": ""
+    },
+    {
+      "id": "24",
+      "productname": "asdf",
+      "description": "sdfg",
+      "price": 23,
+      "category": "electronics",
+      "brand": "asdf",
+      "stockCount": 23,
+      "imageUrl": ""
+    },
+    {
+      "id": "25",
+      "productname": "adsfa",
+      "description": "asdfasdf",
+      "price": 231,
+      "category": "electronics",
+      "brand": "asdf",
+      "stockCount": 231,
+      "imageUrl": ""
+    },
+    {
+      "id": "26",
+      "productname": "asdf",
+      "description": "sdfg",
+      "price": 1234,
+      "category": "electronics",
+      "brand": "asdf",
+      "stockCount": 234,
+      "imageUrl": ""
+    },
+    {
+      "id": "27",
+      "productname": "Asus Rog",
+      "description": "asdfasdfasdf",
+      "price": 212,
+      "category": "electronics",
+      "brand": "Asus",
+      "stockCount": 6,
+      "imageUrl": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQ4oOoCBiNwWdcIOn5W9ZVRlg-QFvtqkor6W3QGdgIHhXumchIlpWaN7LQhDheAFMjl8_v3ssmE_Kv6eSgbSXf0X7RJvkfr9JZmi-TrFCN3S_c_Qfo28Ghv&usqp=CAE"
+    }
+  ],
+  "cart": [
+    {
+      "id": "2",
+      "orderId": "diana2",
+      "productname": "Razer BlackShark V2 Pro",
+      "quantity": "2",
+      "unitPrice": 12000,
+      "totalPrice": 24000,
+      "status": "pending"
+    },
+    {
+      "id": "3",
+      "userId": 1,
+      "orderId": "diana3",
+      "username": "diana",
+      "productname": "Dell XPS 13",
+      "quantity": "1",
+      "unitPrice": 80000,
+      "totalPrice": 80000,
+      "status": "pending"
+    },
+    {
+      "id": "4",
+      "orderId": "diana4",
+      "productname": "Apple MacBook Pro 14",
+      "quantity": "3",
+      "unitPrice": 100000,
+      "totalPrice": 300000,
+      "status": "pending"
+    },
+    {
+      "id": "5",
+      "orderId": "diana5",
+      "userId": 1,
+      "username": "diana",
+      "productname": "Anker PowerCore 26800 Portable Charger",
+      "quantity": "2",
+      "unitPrice": 3000,
+      "totalPrice": 6000,
+      "status": "pending"
+    },
+    {
+      "id": "7",
+      "orderId": 99,
+      "userId": 1,
+      "username": "diana",
+      "productname": "Acer Predator Helios 300",
+      "quantity": "2",
+      "unitPrice": 70000,
+      "totalPrice": 140000,
+      "status": "pending"
+    },
+    {
+      "id": "8",
+      "orderId": 99,
+      "productname": "Razer BlackShark V2 Pro",
+      "quantity": 1,
+      "unitPrice": 12000,
+      "totalPrice": 12000,
+      "status": "pending"
+    },
+    {
+      "id": "9",
+      "orderId": "diana2",
+      "productname": "Razer BlackShark V2 Pro",
+      "quantity": "1",
+      "unitPrice": 12000,
+      "totalPrice": 12000,
+      "status": "pending"
+    },
+    {
+      "id": "10",
+      "orderId": 99,
+      "productname": "Acer Predator Helios 300",
+      "quantity": 1,
+      "userId": 1,
+      "username": "diana",
+      "unitPrice": 70000,
+      "totalPrice": 70000,
+      "status": "pending"
+    },
+    {
+      "id": "11",
+      "orderId": 99,
+      "productname": "Lenovo Legion 5",
+      "quantity": "2",
+      "userId": 1,
+      "username": "diana",
+      "unitPrice": 60000,
+      "totalPrice": 120000,
+      "status": "pending"
+    }
+  ],
+  "orders": []
+}

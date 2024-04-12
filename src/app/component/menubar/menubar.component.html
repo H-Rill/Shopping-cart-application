@@ -1,0 +1,58 @@
+<div *ngIf="isMenuVisible">
+    <mat-toolbar color="primary" class="mat-elevation-z8">
+        <button (click)="drawer.toggle()" mat-icon-button>  
+            <mat-icon>menu</mat-icon>
+        </button>
+            <span>Shopping Cart Application</span>
+            <span class="example-spacer"></span>
+            <button mat-button (click)="logout()">Logout</button>
+      
+    </mat-toolbar>
+    <mat-drawer-container autosize>
+        <mat-drawer #drawer opened="true" mode="side" position="start">
+            <mat-nav-list>
+                <mat-list-item>
+                    <button mat-button routerLink=""><mat-icon>home</mat-icon> Home</button>
+                </mat-list-item>
+            </mat-nav-list>
+            <mat-nav-list>
+                <mat-list-item>
+                    <button mat-button routerLink="products"><mat-icon>storage</mat-icon>Products</button>
+                </mat-list-item>
+            </mat-nav-list>
+            <mat-nav-list>
+                <mat-list-item>
+                    <button mat-button routerLink="users"><mat-icon>verified-user</mat-icon>Users</button>
+                </mat-list-item>
+            </mat-nav-list>
+        </mat-drawer>
+        <mat-drawer-content>
+            <div style="text-align: center;min-height: 600px;">
+                <router-outlet></router-outlet>
+            </div>
+        </mat-drawer-content>
+    </mat-drawer-container>
+</div>
+
+<div *ngIf="userRole === 'user' ">
+    <mat-toolbar color="primary">
+        <button mat-button routerLink="/dashboard">Shopping Cart Application</button>
+        <span class="spacer"></span>
+        <button mat-button [matMenuTriggerFor]="profileMenu" class="profile-button">
+          {{ username }}
+          <mat-icon>keyboard_arrow_down</mat-icon>
+        </button>
+        <mat-menu #profileMenu="matMenu">
+          <button mat-menu-item routerLink="/profile">Profile</button>
+          <button mat-menu-item (click)="logout()">Logout</button>
+        </mat-menu>
+      </mat-toolbar>
+</div>
+<!-- <div style="text-align: center;min-height: 600px;" *ngIf="userRole === 'user' ">
+    <app-shops></app-shops>
+</div> -->
+
+
+<div style="text-align: center;min-height: 600px;" *ngIf="!isMenuVisible" >
+    <router-outlet></router-outlet>
+</div>

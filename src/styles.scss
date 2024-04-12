@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+$green: #00A391;
+$red: #E43F1E;
+$white: #EFF6F5;
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.green-snackbar{
+    background-color: $green !important;
+    color: $white;
+
+    button{
+        background-color: $green;
+        color: $white !important;
+        border: none;
+    }
+
+}
+
+.red-snackbar{
+    background-color: $red !important;
+    color: $white;
+
+    button{
+        background-color: $red;
+        color: $white !important;
+        border: none;
+    }
+
+}

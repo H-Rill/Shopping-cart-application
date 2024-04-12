@@ -1,0 +1,38 @@
+mat-card{
+    margin: 2%;
+    min-height: 500px;
+
+}
+
+.btn{
+    margin-left: 75%;
+}
+td>button{
+    margin-left: 2%;
+}
+
+.mat-action{
+    text-align: center;
+}
+
+.img-size{
+    height: 100px;
+    width: auto;
+}
+
+
+.mat-column-description {
+    word-wrap: break-word !important;
+    white-space: unset !important;
+    flex: 0 0 25% !important;
+    width: 25% !important;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  
+    word-break: break-word;
+  
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }

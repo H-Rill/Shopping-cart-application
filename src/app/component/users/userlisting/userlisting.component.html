@@ -1,0 +1,44 @@
+<mat-card>
+    <mat-card-header>
+        <h1>Customer Listing</h1>
+        <div class="btn"><button mat-raised-button color="primary" (click)="addCustomer()">Add Customer (+)</button></div>
+    </mat-card-header>
+    <mat-card-content>
+        <table  mat-table [dataSource]="datasource" class="mat-elevation-z8">
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef>Id</th>
+                <td mat-cell *matCellDef="let element">{{element.id}}</td>
+            </ng-container>
+            <ng-container matColumnDef="firstName">
+                <th matSort mat-sort-header mat-header-cell *matHeaderCellDef>Name</th>
+                <td mat-cell *matCellDef="let element">{{getName(element)}}</td>
+            </ng-container>
+            <ng-container matColumnDef="email">
+                <th mat-header-cell *matHeaderCellDef>Email</th>
+                <td mat-cell *matCellDef="let element">{{element.email}}</td>
+            </ng-container>
+            <ng-container matColumnDef="mobilenumber">
+                <th mat-header-cell *matHeaderCellDef>Phone</th>
+                <td mat-cell *matCellDef="let element">{{element.mobilenumber}}</td>
+            </ng-container>
+            <ng-container matColumnDef="isActive">
+                <th mat-header-cell *matHeaderCellDef>Status</th>
+                <td mat-cell *matCellDef="let element"><mat-icon  [color]="element.isActive ? 'primary' : 'warn'" matTooltip="{{ element.isActive ? 'Active' : 'Inactive' }}">{{getStatusIcon(element.isActive)}}</mat-icon></td>
+            </ng-container>
+            <ng-container matColumnDef="action">
+                <th mat-header-cell *matHeaderCellDef class="mat-action">Action</th>
+                <td mat-cell *matCellDef="let element" class="mat-action">
+                    <button mat-raised-button color="primary" (click)="editCustomer(element.id)">Edit</button>
+                </td>
+            </ng-container>
+            
+                  
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row;columns:displayedColumns"></tr>
+        </table>
+    </mat-card-content>
+    <br>
+    <mat-card-footer>
+        <mat-paginator [pageSizeOptions]="[5,10,50]" showFirstLastButtons></mat-paginator>
+    </mat-card-footer>
+</mat-card>

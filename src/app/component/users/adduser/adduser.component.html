@@ -1,0 +1,67 @@
+<form [formGroup]="usersForm" (ngSubmit)="SaveUsers()">
+    <mat-card>
+        <mat-card-header>
+            <h1>{{title}}</h1>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-form-field class="mat-50">
+                <mat-label>Username</mat-label>
+                <input (blur)="isDuplicateUser()" formControlName="username" matInput>
+                <mat-error *ngIf="usersForm.get('username')?.touched && usersForm.get('username')?.invalid">Username must not be empty</mat-error>
+            </mat-form-field>
+            <mat-form-field class="mat-50">
+                <mat-label>Password</mat-label>
+                <input formControlName="password" matInput [type]="hide? 'password': 'text'">
+                <a mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  </a>
+                  <mat-error>{{getPasswordErrorMessage()}}</mat-error>
+            </mat-form-field>
+            <mat-form-field class="mat-33">
+                <mat-label>Firstname</mat-label>
+                <input formControlName="firstName" matInput >
+                <mat-error>{{getfirstNameErrorMessage()}}</mat-error>
+            </mat-form-field>
+            <mat-form-field class="mat-33">
+                <mat-label>Middle</mat-label>
+                <input formControlName="middleName" matInput>
+                <mat-error>{{getmiddleNameErrorMessage()}}</mat-error>
+            </mat-form-field>
+            <mat-form-field class="mat-33">
+                <mat-label>Lastname</mat-label>
+                <input formControlName="lastName" matInput>
+                <mat-error>{{getlastNameErrorMessage()}}</mat-error>
+            </mat-form-field>
+            <mat-form-field class="mat-33">
+                <mat-label>Email</mat-label>
+                <input formControlName="email" matInput>
+                <mat-error>{{getemailMessage()}}</mat-error>
+            </mat-form-field>
+            <mat-form-field class="mat-33">
+                <mat-label>Phone</mat-label>
+                <input formControlName="mobilenumber" matInput>
+                <mat-error>{{getmobileErrorMessage()}}</mat-error>
+            </mat-form-field>
+            <mat-form-field class="mat-33">
+                <mat-label>Date of Birth</mat-label>
+                <input formControlName="birthdate" matInput [matDatepicker]="picker">
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+                <!-- <mat-error>{{getBirthdayMessage()}}</mat-error> -->
+              </mat-form-field>
+            <mat-form-field class="mat-33">
+                <mat-label>Role</mat-label>
+                <mat-select formControlName="role" matInput placeholder="Select Role">
+                    <mat-option *ngFor="let option of roleOptions" [value]="option.value">{{ option.viewValue }}</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <div>
+                <mat-checkbox formControlName="isActive">Is Active</mat-checkbox>
+            </div>
+            <mat-card-actions>
+                <button mat-raised-button color="primary" type="Submit">Save</button>
+                <button  mat-raised-button color="warn" type="button" (click)="ClosePopup()">Close</button>
+            </mat-card-actions>
+        </mat-card-content>
+    </mat-card>
+</form>

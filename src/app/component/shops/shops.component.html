@@ -1,0 +1,93 @@
+<section style="margin-top: 20px;"> 
+  <div class="example-button-row">
+    <div class="example-flex-container">
+      <div class="example-button-container">
+        <button mat-fab color="accent" aria-label="shopping cart button" (click)="GotoCart()">
+          <mat-icon>shopping_cart</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</section >
+<div class="container">
+
+
+<mat-card class="search-section">
+  <mat-card-header>
+    <h2>Products</h2>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="search-form">
+      <mat-form-field appearance="fill" class="search">
+        <mat-label>Search here</mat-label>
+        <input matInput type="text" placeholder="Search" #searchInput>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="category-select">
+        <mat-label>Category</mat-label>
+        <mat-select #categorySelect (selectionChange)="applyFilter(searchInput.value, categorySelect.value)">
+          <mat-option *ngFor="let category of uniqueCategories" [value]="category">{{ category }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div class="btn-action">
+        <button mat-raised-button color="primary" (click)="applyFilter(searchInput.value, categorySelect.value)">SEARCH</button>
+        <button mat-raised-button color="warn" (click)="clearFilters(searchInput, categorySelect.value)">CLEAR</button>
+      </div>
+    </div>
+
+    <div class="search-minmax-form">
+      <mat-form-field appearance="fill" class="search-min">
+        <mat-label>Min Price</mat-label>
+        <input matInput type="number" placeholder="Min Price" [(ngModel)]="minPrice">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="search-max">
+        <mat-label>Max Price</mat-label>
+        <input matInput type="number" placeholder="Max Price" [(ngModel)]="maxPrice">
+      </mat-form-field>
+      <div class="btn-action">
+      <button mat-raised-button color="primary" (click)="applyPriceFilter()">Apply</button>
+      </div>
+    </div>
+
+    <div class="btn-action">
+      <button mat-raised-button color="primary" (click)="sortByName('asc')">Sort A-Z</button>
+      <button mat-raised-button color="primary" (click)="sortByName('desc')">Sort Z-A</button>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+  
+
+ 
+ 
+
+
+  
+ <mat-divider></mat-divider>
+
+
+  <mat-grid-list cols="4" rowHeight="4:4" style="margin-top: 50px;">
+    <mat-grid-tile *ngFor="let data of datasource.filteredData" >
+      <mat-card class="product-card">
+        <mat-card-header>
+          <mat-card-title>{{ data.productname }}</mat-card-title>
+          <mat-card-subtitle>{{ data.description }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content class="product-card-content">
+          <p>Category: {{ data.category }}</p>
+          <p>Brand: {{ data.brand }}</p>
+          <p>Unit Price: ₱ {{ data.price }}</p>
+          <p>Available Stocks: {{ data.stockCount }}</p>
+          <p>Sold: {{ data.orderCount }}</p>
+
+          <button (click)="seeData(data, 1, data.Id)" mat-raised-button color="primary">Add to Cart</button>
+        </mat-card-content>
+        
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+
+</div>

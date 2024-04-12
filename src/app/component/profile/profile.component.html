@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="flex-avatar">
+    <div class="user-avatar">
+      <p>
+        {{ customerProfile.firstName.slice(0, 1)
+        }}{{ customerProfile.lastName.slice(0, 1) }}
+      </p>
+    </div>
+    <h2>{{ customerProfile.firstName }} {{ customerProfile.lastName }}</h2>
+  </div>
+  <mat-card>
+    <h2>My Profile</h2>
+    <div class="divider">
+      <mat-divider></mat-divider>
+    </div>
+    <mat-card-content>
+        <div class="user-details-container">
+          <div class="user-details">
+            <p class="details-title">Email</p>
+            <p class="details-data">{{ customerProfile.email }}</p>
+          </div>
+          <div class="user-details">
+            <p class="details-title">Username</p>
+            <p class="details-data">{{ customerProfile.username }}</p>
+          </div>
+          <div class="user-details">
+            <p class="details-title">Date of Birth</p>
+            <p class="details-data">{{ customerProfile.birthdate }}</p>
+          </div>
+      
+          <div class="user-details">
+            <p class="details-title">Interests</p>
+            <ul class="interests-list">
+              <li *ngFor="let interest of customerProfile.interests">{{ interest }}</li>
+            </ul>
+          </div>
+        </div>
+      </mat-card-content>
+  </mat-card>
+</div>
