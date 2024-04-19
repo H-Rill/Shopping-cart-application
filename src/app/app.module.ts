@@ -37,6 +37,7 @@ import { CartListComponent } from './component/cart/cart-list/cart-list.componen
 import { CheckoutComponent } from './component/cart/checkout/checkout.component';
 import { CartReducer } from './core/Stores/Cart/Cart.Reducer';
 import { CartEffects } from './core/Stores/Cart/Cart.Effect';
+import { ServiceWorkerModule } from '@angular/service-worker';
 // import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
@@ -69,7 +70,12 @@ import { CartEffects } from './core/Stores/Cart/Cart.Effect';
     StoreModule.forRoot({users:UserReducer, products: ProductReducer,  customers: customerReducer, cart: CartReducer}),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() , connectInZone: true}),
     EffectsModule.forRoot([userEffects,AppEffects, productEffects, CustomerEffects,CartEffects]),
-    NgxMaskDirective,NgxMaskPipe,
+    NgxMaskDirective,NgxMaskPipe, ServiceWorkerModule.register('ngsw-worker.js', {
+  enabled: !isDevMode(),
+  // Register the ServiceWorker as soon as the application is stable
+  // or after 30 seconds (whichever comes first).
+  registrationStrategy: 'registerWhenStable:30000'
+}),
   //   ServiceWorkerModule.register('ngsw-worker.js', {
   // enabled: !isDevMode(),
   // // Register the ServiceWorker as soon as the application is stable
